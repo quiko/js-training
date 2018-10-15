@@ -9,6 +9,22 @@
  */
 
 // Your code :
+function multiply(x,y){
+    let sum = 0
+    let i=0
+    if(y>0){
+      while(i < y){
+        sum =sum+x
+        i++
+    } return sum
+    }else{
+    while(i>y){
+        sum=sum+x
+        i=i-1
+    }return -sum
+    }
+     
+}
 
 //* Begin of tests
 const assert = require('assert')
