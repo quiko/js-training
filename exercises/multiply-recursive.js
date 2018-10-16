@@ -1,4 +1,4 @@
-'use strict'
+
 
 /*
  * Create a `multiply` function that takes two number as arguments
@@ -10,7 +10,16 @@
  */
 
 // Your code :
-
+function multiply(x,y){
+    if(x<y) {
+        return multiply(y,x)
+    }
+    if(y != 0){
+        return ( x + multiply(x,(y-1)))
+    }else{
+        return 0
+    }
+}
 //* Begin of tests
 const assert = require('assert')
 

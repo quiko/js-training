@@ -9,11 +9,18 @@
  * Example : "How are you ?" -> "How Are You ?"
  *
  */
-
-
+function JadenCase(param){
+ 
+    let  Capitalized = param.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)) .join(' ')
+ 
+ return Capitalized
+     
+ }
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(JadenCase("loulou"), "Loulou")
+assert.strictEqual(JadenCase("hello world"), "Hello World")
+
 // End of tests */
