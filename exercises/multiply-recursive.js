@@ -10,16 +10,33 @@
  */
 
 // Your code :
-function multiply(x,y){
-    if(x<y) {
-        return multiply(y,x)
-    }
-    if(y != 0){
-        return ( x + multiply(x,(y-1)))
-    }else{
-        return 0
-    }
-}
+let somme = 0;
+let count = 0;
+let total = 0;
+
+function multiply (x, y){
+
+    if(count!= y){
+        if (y>0){
+          count +=1
+          somme +=x
+          multiply(x,y)
+        }
+        if(y<0){
+          count -= 1
+          somme -=x
+          multiply(x,y)
+        }
+     }else{
+        total = somme;
+        somme = 0;
+        count = 0;
+     }
+     return total;
+
+
+ }
+
 //* Begin of tests
 const assert = require('assert')
 
